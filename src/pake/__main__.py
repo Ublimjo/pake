@@ -1,5 +1,6 @@
 import os
 import imp
+import click
 
 
 def check_file(path='./', _file='_pake_.py'):
@@ -11,11 +12,16 @@ def check_file(path='./', _file='_pake_.py'):
         return False
 
 
+def execute(wf):
+    _pake_ = imp.load_source('_pake_', wf)
+    for element in _pake_.NO_CMD:
+        element()
+
+
+@click.command()
 def main():
     wf = check_file()
     if wf:
-        _pake_ = imp.load_source('_pake_', wf)
-        for element in _pake_.NO_CMD:
-            element()
+        execute(wf)
     else:
         print('_pake_.py file not found')
