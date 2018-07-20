@@ -2,14 +2,35 @@
 pake
 ====
 
+**pake** is a make replacement for python
 
-make replacement for python
+
+Installation
+============
+
+**pake** is not yet available in pypi but you can get it from source::
+
+  $ git clone https://github.com/Ublimjo/pake.git
+  $ cd pake/
+  $ python setup.py install
 
 
-Description
-===========
+Difference between make
+=======================
 
-A longer description of your project goes here...
++----------------+-------------------------+--------------------------+
+|                | make                    | pake                     |
++================+=========================+==========================+
+| main file      | Makefile                | _pake_.py                |
++----------------+-------------------------+--------------------------+
+| main file type | yaml(yml)               | python(py)               |
++----------------+-------------------------+--------------------------+
+|                | .. code-block:: guess   | .. code-block:: python   |
+|                |                         |                          |
+| declare test   |   test:                 |   def test():            |
+|                |       @echo "run test"" |       '''run test'''     |
+|                |       pytest            |       x_('pytest')       |
++----------------+-------------------------+--------------------------+
 
 
 Note

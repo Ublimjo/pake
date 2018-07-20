@@ -2,40 +2,42 @@
 pake
 ====
 
-This is the documentation of **pake**.
+**pake** is a replacement of make for python.
 
-.. note::
 
-    This is the main page of your project's `Sphinx <http://sphinx-doc.org/>`_
-    documentation. It is formatted in `reStructuredText
-    <http://sphinx-doc.org/rest.html>`__. Add additional pages by creating
-    rst-files in ``docs`` and adding them to the `toctree
-    <http://sphinx-doc.org/markup/toctree.html>`_ below. Use then
-    `references <http://sphinx-doc.org/markup/inline.html>`__ in order to link
-    them from this page, e.g. :ref:`authors <authors>` and :ref:`changes`.
+Installation
+============
 
-    It is also possible to refer to the documentation of other Python packages
-    with the `Python domain syntax
-    <http://sphinx-doc.org/domains.html#the-python-domain>`__. By default you
-    can reference the documentation of `Sphinx <http://sphinx.pocoo.org>`__,
-    `Python <http://docs.python.org/>`__, `NumPy
-    <http://docs.scipy.org/doc/numpy>`__, `SciPy
-    <http://docs.scipy.org/doc/scipy/reference/>`__, `matplotlib
-    <http://matplotlib.sourceforge.net>`__, `Pandas
-    <http://pandas.pydata.org/pandas-docs/stable>`__, `Scikit-Learn
-    <http://scikit-learn.org/stable>`__. You can add more by
-    extending the ``intersphinx_mapping`` in your Sphinx's ``conf.py``.
+**pake** is not yet available in pypi but you can get it from source::
 
-    The pretty useful extension `autodoc
-    <http://www.sphinx-doc.org/en/stable/ext/autodoc.html>`__ is activated by
-    default and lets you include documentation from docstrings. Docstrings can
-    be written in `Google
-    <http://google.github.io/styleguide/pyguide.html#Comments>`__
-    (recommended!), `NumPy
-    <https://github.com/numpy/numpy/blob/master/doc/HOWTO_DOCUMENT.rst.txt>`__
-    and `classical
-    <http://www.sphinx-doc.org/en/stable/domains.html#info-field-lists>`__
-    style.
+  $ git clone https://github.com/Ublimjo/pake.git
+  $ cd pake/
+  $ python setup.py install
+
+
+Difference between make
+=======================
+
++----------------+-------------------------+--------------------------+
+|                | make                    | pake                     |
++================+=========================+==========================+
+| main file      | Makefile                | _pake_.py                |
++----------------+-------------------------+--------------------------+
+| main file type | yaml(yml)               | python(py)               |
++----------------+-------------------------+--------------------------+
+|                | .. code-block:: guess   | .. code-block:: python   |
+|                |                         |                          |
+| declare test   |   test:                 |   def test():            |
+|                |       @echo "run test"  |       '''run test'''     |
+|                |       pytest            |       x_('pytest')       |
++----------------+-------------------------+--------------------------+
+
+
+Note
+====
+
+This project has been set up using PyScaffold 3.0.3.post0.dev61+ge5fed5a.dirty. For details and usage
+information on PyScaffold see http://pyscaffold.org/.
 
 
 Contents
