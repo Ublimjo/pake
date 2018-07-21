@@ -3,7 +3,8 @@
 Pake - replacement of make for python
 '''
 
-from .decorator import command
+from .utils import command
+from .utils import x_
 
 from pkg_resources import get_distribution, DistributionNotFound
 
