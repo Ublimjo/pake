@@ -3,6 +3,8 @@
 Pake - replacement of make for python
 '''
 
+from .decorator import command
+
 from pkg_resources import get_distribution, DistributionNotFound
 
 try:
