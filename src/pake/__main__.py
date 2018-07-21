@@ -23,12 +23,15 @@ def execute(working_file, cmd):
     execute function in _pake_
     '''
     _pake_ = imp.load_source('_pake_', working_file)
-    if cmd:
-        for element in cmd:
-            exec('_pake_.{}()'.format(element))
-    else:
-        for element in _pake_.NO_CMD:
-            element()
+    try:
+        if cmd:
+            for element in cmd:
+                exec('_pake_.{}()'.format(element))
+        else:
+            for element in _pake_.NO_CMD:
+                element()
+    except Exception as e:
+        print(e)
 
 
 @click.command()
