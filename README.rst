@@ -25,9 +25,10 @@ Difference between make
 +----------------+-------------------------+--------------------------+
 | main file type | yaml(yml)               | python(py)               |
 +----------------+-------------------------+--------------------------+
-|                | .. code-block:: guess   | .. code-block:: python   |
+| declare test   | .. code-block:: guess   | .. code-block:: python   |
 |                |                         |                          |
-| declare test   |   test:                 |   def test():            |
+|                |                         |   @command               |
+|                |   test:                 |   def test():            |
 |                |       @echo "run test"" |       '''run test'''     |
 |                |       pytest            |       x_('pytest')       |
 +----------------+-------------------------+--------------------------+
